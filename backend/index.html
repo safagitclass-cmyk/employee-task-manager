@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Task Manager</title>
+</head>
+<body>
+    <h1>Employee Task Manager</h1>
+
+    <h2>Add Employee</h2>
+    <input type="text" id="employee" placeholder="Employee Name">
+    <button onclick="addEmployee()">Add Employee</button>
+
+    <h2>Assign Task</h2>
+    <input type="text" id="task" placeholder="Task Name">
+    <button onclick="addTask()">Add Task</button>
+
+    <h2>Tasks</h2>
+    <ul id="taskList"></ul>
+
+    <script>
+        function addEmployee() {
+            alert("Employee Added");
+        }
+
+        function addTask() {
+            let task = document.getElementById("task").value;
+            let li = document.createElement("li");
+            li.innerText = task;
+            document.getElementById("taskList").appendChild(li);
+        }
+    </script>
+</body>
+</html>
